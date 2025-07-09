@@ -1,0 +1,148 @@
+{
+  "expo": {
+    "name": "Lesson Plan App",
+    "slug": "lesson-plan-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.rituzangle.lessonplanapp",
+      "buildNumber": "1.0.0",
+      "infoPlist": {
+        "NSCameraUsageDescription": "This app uses camera for visual learning activities and accessibility features",
+        "NSMicrophoneUsageDescription": "This app uses microphone for voice lessons, speech recognition, and accessibility features",
+        "NSSpeechRecognitionUsageDescription": "This app uses speech recognition for voice commands and accessibility",
+        "NSPhotoLibraryUsageDescription": "This app accesses photo library for educational content and assignments",
+        "NSPhotoLibraryAddUsageDescription": "This app saves educational content and progress screenshots",
+        "NSDocumentsFolderUsageDescription": "This app accesses documents for lesson plans and educational materials",
+        "NSAppleMusicUsageDescription": "This app accesses music library for performing arts lessons"
+      },
+      "config": {
+        "usesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "package": "com.rituzangle.lessonplanapp",
+      "versionCode": 1,
+      "permissions": [
+        "CAMERA",
+        "RECORD_AUDIO",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "VIBRATE",
+        "INTERNET",
+        "ACCESS_NETWORK_STATE",
+        "WAKE_LOCK",
+        "MODIFY_AUDIO_SETTINGS",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "name": "Lesson Plan App",
+      "shortName": "LessonPlan",
+      "lang": "en",
+      "scope": "/",
+      "themeColor": "#000000",
+      "description": "Inclusive K-12 lesson planning app with comprehensive accessibility features",
+      "dir": "auto",
+      "display": "standalone",
+      "orientation": "any",
+      "startUrl": "/",
+      "preferRelatedApplications": false,
+      "shortcuts": [
+        {
+          "name": "Create Lesson",
+          "short_name": "Create",
+          "description": "Create a new lesson plan",
+          "url": "/create-lesson",
+          "icons": [
+            {
+              "src": "./assets/shortcut-create.png",
+              "sizes": "192x192"
+            }
+          ]
+        },
+        {
+          "name": "Student Dashboard",
+          "short_name": "Study",
+          "description": "Access student learning dashboard",
+          "url": "/student-dashboard",
+          "icons": [
+            {
+              "src": "./assets/shortcut-study.png",
+              "sizes": "192x192"
+            }
+          ]
+        }
+      ]
+    },
+    "plugins": [
+      "expo-camera",
+      "expo-av",
+      "expo-notifications",
+      "expo-document-picker",
+      "expo-print",
+      "expo-sharing",
+      "expo-speech",
+      "expo-haptics",
+      "expo-localization",
+      [
+        "expo-screen-orientation",
+        {
+          "initialOrientation": "PORTRAIT"
+        }
+      ],
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./assets/fonts/OpenDyslexic-Regular.otf",
+            "./assets/fonts/OpenDyslexic-Bold.otf",
+            "./assets/fonts/Atkinson-Hyperlegible-Regular.ttf",
+            "./assets/fonts/Atkinson-Hyperlegible-Bold.ttf"
+          ]
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "your-project-id"
+      }
+    },
+    "scheme": "lesson-plan-app",
+    "privacy": "public",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "primaryColor": "#4A90E2",
+    "backgroundColor": "#FFFFFF",
+    "updates": {
+      "fallbackToCacheTimeout": 0,
+      "url": "https://u.expo.dev/your-project-id"
+    },
+    "runtimeVersion": {
+      "policy": "sdkVersion"
+    }
+  }
+}
