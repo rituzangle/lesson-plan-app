@@ -13,6 +13,17 @@
 - ✅ Established privacy-first, GDPR-compliant design
 - ✅ Outlined comprehensive feature set
 
+### Database Schema - Key Features:
+- 🔐 Encrypted user data (profiles, children, lessons)
+- 📱 AsyncStorage for React Native compatibility
+- 🏗️ Modular design with TypeScript interfaces
+- 🔄 CRUD operations for all data types
+<!-- 
+To implement database (Done via scripts/setup.sh):
+npm install @react-native-async-storage/async-storage crypto-js
+npm install --save-dev @types/crypto-js
+-->
+
 ### Key Decisions Made
 1. **Architecture**: Modular, privacy-first approach
 2. **Tech Stack**: React Native (Expo) + TypeScript + Python backend

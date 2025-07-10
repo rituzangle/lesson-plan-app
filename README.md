@@ -62,8 +62,8 @@ src/
 - [Architecture](docs/architecture.md)
 - [Database Schema](docs/database.md)
 - [Development Log](docs/development_log.md)
-- [Project Guide][PROJECT_GUIDE.md]
-- [Next Steps][NEXT_STEPS.md] To remember next set of steps on the plan while development 
+- [Project Guide][docs/PROJECT_GUIDE.md]
+- [Next Steps][NEXT_STEPS.md] List of next set of steps on the plan, while development 
 
 ---
 ## 🌱 Branching Strategy

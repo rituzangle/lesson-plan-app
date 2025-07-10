@@ -16,9 +16,14 @@ mkdir -p src/constants
 mkdir -p src/types
 mkdir -p scripts
 mkdir -p docs
+mkdir -p docs/api
+mkdir -p docs/user-stories
+mkdir -p docs/privacy-policy
+mkdir -p assets/images assets/icons assets/fonts assets/sounds
 
+    
 # Install core dependencies
-echo "📦 Installing dependencies..."
+echo "📦 Installing Core Dependencies..."
 npm install @react-native-async-storage/async-storage crypto-js
 
 # Install dev dependencies
@@ -35,8 +40,17 @@ const pkg = JSON.parse(fs.readFileSync(packagePath, 'utf8'));
 
 pkg.scripts = pkg.scripts || {};
 pkg.scripts['setup'] = 'bash scripts/setup.sh';
+echo;
+echo '📦 Adding setup script to package.json...'; 
+echo ' running npm install @react-native-async-storage/async-storage crypto-js';
+pkg.scripts['setup:core'] = 'npm install @react-native-async-storage/async-storage crypto-js && npm install --save-dev @types/crypto-js';
+echo '🔧 Adding dev dependencies to package.json... and '; echo "npm install --save-dev @types/crypto-js";
 pkg.scripts['setup:database'] = 'npm install @react-native-async-storage/async-storage crypto-js && npm install --save-dev @types/crypto-js';
+echo;
+echo '📦 Adding setup:onboarding script to package.json...'; echo "npm install @react-native-async-storage/async-storage crypto-js"
 pkg.scripts['setup:onboarding'] = 'npm install @react-native-async-storage/async-storage crypto-js && npm install --save-dev @types/crypto-js';
+# pkg.scripts['start'] = 'echo \"Starting the app...\" && npm run setup';
+echo;
 pkg.scripts['test:database'] = 'echo \"Database tests integrated in app\"';
 pkg.scripts['clean:database'] = 'echo \"Use clearDatabaseForTesting() function\"';
 pkg.scripts['build:docs'] = 'echo \"Documentation auto-generated\"';
@@ -123,7 +137,8 @@ npm start
 npm run test:database
 \`\`\`
 
-## File Structure
+## 📂 File Structure - detailed in project structure documentation
+- [Project Structure](docs/project_structure.md)
 \`\`\`
 src/
 ├── components/        # React components
@@ -140,7 +155,7 @@ src/
 - [Database Schema](docs/database.md)
 - [Development Log](docs/development-log.md)
 EOF
-fi
+fi # README.md created if it didn't exist
 
 # Check if all files are in place
 echo "🔍 Checking project structure..."

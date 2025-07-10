@@ -19,13 +19,14 @@ lesson-plan-app/
 ├── .env.local
 │
 ├── docs/
-│   ├── README.md
 │   ├── architecture.md
 │   ├── development-log.md
 │   ├── api-reference.md
+│   ├── deployment-guide.md
+│   ├── index.md
 │   ├── user-stories.md
 │   ├── privacy-policy.md
-│   ├── deployment-guide.md
+│   ├── PROJECT_GUIDE.md
 │   └── testing-strategy.md
 │
 ├── src/
