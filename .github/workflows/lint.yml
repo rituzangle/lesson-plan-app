@@ -1,0 +1,39 @@
+name: Lint and Test
+
+##  GitHub Actions workflow
+#  Runs on push/PR to main and dev
+#  Installs deps, runs linter, type checks, and unit tests
+#  Quick feedback before merging
+
+
+on:
+  push:
+    branches: [ main, dev ]
+  pull_request:
+    branches: [ main, dev ]
+
+jobs:
+  lint-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up Node
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Run ESLint
+      run: npm run lint
+
+    - name: Type check
+      run: npm run type-check
+
+    - name: Run unit tests
+      run: npm run test
+

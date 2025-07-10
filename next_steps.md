@@ -3,29 +3,19 @@
 Create the GitHub repository and push initial files - done
 GitHub URL: K-12 Lession Plan APP (this project): "git@github.com:rituzangle/lesson-plan-app.git"
 
-## This Project's Next Steps :
+## This Project's Next Steps:
 Initialize the Expo project with the basic structure
-Check Database setup. Currently building for for: parent/ guardian/ tutor with limited number of students, or self.
-Add question about who the plan is for - self or .. use best way to enquire and next steps.
-Note for project - basing plans on education/ knowledge level not age
-Start with user onboarding (user type selection, child/older/self setup)
+Check Database setup. Currently building for: parent/ guardian/ tutor with limited number of students, or self. fix if not done.
+in app: Add question about who the plan is for - self or .. Use Claude's judegement option based on best practice or knowledge, to enquire and add next steps.
+Note for project - basing plans on level of 'education/ knowledge' not age
+Start with user onboarding (user type selection, tutor/guardian/parent/child/older person student/self setup)
 Begin with lesson planning core (subject selection, basic templates)
-## Always
-Update Development log or conversation continuity and update github:
-update with each completed step/ artifact to track progress
-Each session, reference it to continue to next steps
-if in doubt, use date and time to track diff in git and local
-## Ritu's requirements:
-Update documentation corresponding to changes
-Adhere to Ritu's requirements about inclusive, privacy, accessibilty, etc
-Use best practices - pythonic, future friendly, scalable, modular, built in automatation (with scripts sh, python, etc), user and coder friendly
-Intentionally choose best options for building artifacts based on Professional Moral Ethical code of conduct, with cultural respect, especially when translating or localisation. 
-As much as possible - no tracking or private data collection, unless absolutely necessary, encrypt data even if saved locally and during transmission.
-ask for github if specified, git username: rituzangle
-use: GitHub URL (using ssh): git@github.com:rituzangle/<REPO-NAME>.git
-add conversation URL to a doc in github for reference and project continuity
-Each component as separate artifact, with comments to specify its version, date created or modified, spot in the project hierarchy.  Automate placement or move artifact to its correct place in the directory. add to log
+When planning a session - ask whats on plan today? subject etc or carry on from last session. keep track of sessions locally - or on their online/cloud storage. help setup if we can. 
+Add help for new to online and cloud storage and free options.
+If they need help, help by providing basic knowledge - read to help user understand how and why online storage and how to setup - help setup free options, help setup email id for best available for free options.
 
-## To avoid message size issues:
-1. Create small, focused code modules
-2. Sync regularly with GitHub
+## Always
+Update [Development log][development_log.md] or conversation continuity and update github after each completed step/ artifact to track progress
+Follow my [Project Guide][PROJECT_GUIDE.md], ask if missing
+Add Next steps to PROJECT GUIDE to continue with project
+Use date and time to log files
