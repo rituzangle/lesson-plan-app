@@ -58,12 +58,12 @@ src/
 > 📦 Full list: see [`package.json`](./package.json)
 
 ---
-## Documentation
+## 📚 Documentation
 - [Architecture](docs/architecture.md)
 - [Database Schema](docs/database.md)
 - [Development Log](docs/development_log.md)
 - [Project Guide][PROJECT_GUIDE.md]
-- [Next Steps][NEXT_STEPS.md] To remember next set of steps on the plan while development
+- [Next Steps][NEXT_STEPS.md] To remember next set of steps on the plan while development 
 
 ---
 ## 🌱 Branching Strategy
@@ -101,3 +101,24 @@ python scripts/create_project_guide.py ../new-project lesson-plan-app
 - Handles placeholders, Git init, remote add
 - Guides beginners on using git & gh CLI
 - Explains common Git/SSH errors
+
+---
+
+## ✅ **Summary:**
+- The Python script *will work* even if `.git` already exists — it just skips init.
+- `package.json` covers dependencies, but README summary helps humans/LLMs.
+
+## Next, when we can:
+- Add branching strategy, tests & CI/CD plan makes your repo clearer & scalable.
+
+## ✏️ Extra notes:
+- For tests: our package.json already has jest & @testing-library/react-native
+- For CI/CD: expand workflow later to deploy docs, build app, etc.
+- .gitignore can grow as we add tools
+---
+<!-- 
+Next 
+✅ Generate starter `.github/workflows/lint.yml`  
+✅ Make starter `tests/` folder with a sample Jest test  
+✅ Suggest a lightweight `.gitignore`
+This is a comment in markdown 🚀 --> 
