@@ -21,7 +21,7 @@
     "setup": "bash ./scripts/setup.sh",
     "code-gen": "python ./scripts/code-gen.py",
     "git-sync": "bash ./scripts/git-sync.sh",
-    "deploy": "bash ./scripts/deploy.sh"
+    "deploy": "bash ./scripts/deploy-script.sh"
   },
   "keywords": [
     "education",

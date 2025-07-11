@@ -149,10 +149,10 @@ lesson-plan-app/
 ├── scripts/
 │   ├── setup.sh
 │   ├── build.sh
-│   ├── deploy.sh
+│   ├── deploy-script.sh
 │   ├── test.sh
 │   ├── code-gen.py
-│   └── git-sync.sh
+│   └── git-sync-script.sh
 │
 ├── assets/
 │   ├── images/

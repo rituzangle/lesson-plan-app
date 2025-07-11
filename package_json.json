@@ -25,7 +25,7 @@
     "reset-cache": "expo start --clear",
     "generate-docs": "typedoc",
     "setup": "./scripts/setup.sh",
-    "deploy": "./scripts/deploy.sh"
+    "deploy": "./scripts/-script"
   },
   "keywords": [
     "education",

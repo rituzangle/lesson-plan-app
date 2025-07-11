@@ -40,13 +40,13 @@ const pkg = JSON.parse(fs.readFileSync(packagePath, 'utf8'));
 
 pkg.scripts = pkg.scripts || {};
 pkg.scripts['setup'] = 'bash scripts/setup.sh';
-echo;
-echo '📦 Adding setup script to package.json...'; 
-echo ' running npm install @react-native-async-storage/async-storage crypto-js';
+echo
+echo '📦 Adding setup script to package.json...'
+echo ' running npm install @react-native-async-storage/async-storage crypto-js'
 pkg.scripts['setup:core'] = 'npm install @react-native-async-storage/async-storage crypto-js && npm install --save-dev @types/crypto-js';
-echo '🔧 Adding dev dependencies to package.json... and '; echo "npm install --save-dev @types/crypto-js";
+echo '🔧 Adding dev dependencies to package.json... and '; echo "npm install --save-dev @types/crypto-js"
 pkg.scripts['setup:database'] = 'npm install @react-native-async-storage/async-storage crypto-js && npm install --save-dev @types/crypto-js';
-echo;
+echo
 echo '📦 Adding setup:onboarding script to package.json...'; echo "npm install @react-native-async-storage/async-storage crypto-js"
 pkg.scripts['setup:onboarding'] = 'npm install @react-native-async-storage/async-storage crypto-js && npm install --save-dev @types/crypto-js';
 # pkg.scripts['start'] = 'echo \"Starting the app...\" && npm run setup';
