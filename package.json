@@ -26,7 +26,12 @@
     "setup:onboarding": "npm install @react-native-async-storage/async-storage crypto-js && npm install --save-dev @types/crypto-js",
     "test:database": "echo \"Database tests integrated in app\"",
     "clean:database": "echo \"Use clearDatabaseForTesting() function\"",
-    "build:docs": "echo \"Documentation auto-generated\""
+    "build:docs": "echo \"Documentation auto-generated\"","docs:install": "cd website && npm install",
+    "docs:dev": "cd website && npm start",
+    "docs:build": "cd website && npm run build",
+    "docs:deploy": "cd website && npm run deploy",
+    "docs:serve": "cd website && npm run serve"
+
   },
   "keywords": [
     "education",

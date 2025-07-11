@@ -63,7 +63,14 @@ src/
 - [Database Schema](docs/database.md)
 - [Development Log](docs/development_log.md)
 - [Project Guide][docs/PROJECT_GUIDE.md]
-- [Next Steps][NEXT_STEPS.md] List of next set of steps on the plan, while development 
+- [Next Steps][NEXT_STEPS.md] List of next set of steps on the plan, while development
+### 📚 Running the Documentation
+
+This project uses [Docusaurus](https://docusaurus.io/) for developer and user documentation, located in the `website/` folder.
+
+#### 🛠 Install docs dependencies
+```bash
+npm run docs:install
 
 ---
 ## 🌱 Branching Strategy
