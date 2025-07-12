@@ -1,3 +1,5 @@
+../remove_url.sh
+# removed from
 git add .
 echo "git commit -m ' add message ' "
 

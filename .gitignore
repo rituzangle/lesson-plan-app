@@ -1,6 +1,12 @@
 # Notes
 *.txt
 
+# downloads and temp
+downloads/
+
+# Environment Config
+.env*
+
 # Dependencies
 node_modules/
 npm-debug.log*
