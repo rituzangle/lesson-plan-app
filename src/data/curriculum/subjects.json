@@ -1,0 +1,16 @@
+{
+  "subjects": [
+    {
+      "id": "performing_arts",
+      "name": "Performing Arts",
+      "description": "Theater, dance, music, and creative expression",
+      "standards": ["creativity", "collaboration", "communication"]
+    },
+    {
+      "id": "science",
+      "name": "Science",
+      "description": "Scientific inquiry and discovery",
+      "standards": ["inquiry", "analysis", "evidence"]
+    }
+  ]
+}
