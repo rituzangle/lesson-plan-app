@@ -1,0 +1,28 @@
+// Sample curriculum templates and subjects data
+// This JSON structure includes subjects, templates, and common activities
+// It is designed to be easily extendable and maintainable
+// This file is a sample curriculum data structure for educational purposes
+// It includes subjects, templates, and common activities
+// The structure is designed to be easily extendable and maintainable
+// It can be used in a lesson planning application to provide a rich set of resources for teachers
+// The data is structured to include various subjects, each with its own templates and common activities
+// The templates include detailed information such as objectives, materials, activities, and assessments
+// The common activities section provides reusable activities that can be applied across subjects
+// The JSON format allows for easy integration with front-end applications and can be extended with additional subjects
+// or templates as needed
+// This file is intended to be used as a sample curriculum data structure for educational applications
+// It can be used to demonstrate how to structure curriculum data in a JSON format
+// The data is organized into subjects, each containing templates and common activities
+// The subjects include Mathematics, Science, English Language Arts, Social Studies, and Performing Arts
+// Each subject has a name, icon, color, description, standards, grade levels, and templates
+// The templates include detailed information such as objectives, materials, activities, and assessments
+// The common activities section provides reusable activities that can be applied across subjects
+// This structure is designed to be easily extendable and maintainable, allowing for the addition of
+// new subjects or templates as needed
+// The JSON format allows for easy integration with front-end applications and can be used in a lesson planning application
+// to provide a rich set of resources for teachers
+// The data is structured to include various subjects, each with its own templates and common activities
+// The templates include detailed information such as objectives, materials, activities, and assessments
+// The common activities section provides reusable activities that can be applied across subjects
+// The JSON format allows for easy integration with front-end applications and can be extended with additional subjects
+// or templates as needed
