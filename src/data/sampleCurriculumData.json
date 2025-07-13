@@ -1,0 +1,297 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2025-07-11",
+  "subjects": {
+    "mathematics": {
+      "name": "Mathematics",
+      "icon": "calculator",
+      "color": "#4CAF50",
+      "description": "Problem-solving and logical thinking",
+      "standards": ["Common Core", "NCTM", "State Standards"],
+      "gradeLevels": ["K", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
+      "templates": [
+        {
+          "id": "math-basic-operations",
+          "name": "Basic Operations",
+          "description": "Addition, subtraction, multiplication, division",
+          "duration": 45,
+          "gradeLevels": ["K", "1", "2", "3"],
+          "objectives": [
+            "Students will demonstrate understanding of basic arithmetic operations",
+            "Students will solve word problems using appropriate operations",
+            "Students will explain their mathematical thinking"
+          ],
+          "materials": [
+            "Manipulatives (blocks, counters)",
+            "Whiteboard and markers",
+            "Worksheets",
+            "Calculator (if appropriate)"
+          ],
+          "activities": [
+            {
+              "name": "Warm-up Review",
+              "duration": 10,
+              "description": "Review previous concepts with quick practice problems"
+            },
+            {
+              "name": "Guided Practice",
+              "duration": 20,
+              "description": "Work through examples together using manipulatives"
+            },
+            {
+              "name": "Independent Practice",
+              "duration": 10,
+              "description": "Students solve problems independently"
+            },
+            {
+              "name": "Closure",
+              "duration": 5,
+              "description": "Share strategies and reflect on learning"
+            }
+          ],
+          "assessment": {
+            "formative": "Exit ticket with 3 problems",
+            "summative": "Unit test on operations"
+          }
+        }
+      ]
+    },
+    "science": {
+      "name": "Science",
+      "icon": "flask",
+      "color": "#2196F3",
+      "description": "Explore the natural world through inquiry",
+      "standards": ["NGSS", "State Science Standards"],
+      "gradeLevels": ["K", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
+      "templates": [
+        {
+          "id": "science-weather-patterns",
+          "name": "Weather Patterns",
+          "description": "Observing and recording weather data",
+          "duration": 60,
+          "gradeLevels": ["K", "1", "2"],
+          "objectives": [
+            "Students will observe and record daily weather patterns",
+            "Students will identify different types of weather",
+            "Students will use weather tools to collect data"
+          ],
+          "materials": [
+            "Thermometer",
+            "Wind vane",
+            "Rain gauge",
+            "Weather chart",
+            "Crayons/markers"
+          ],
+          "activities": [
+            {
+              "name": "Weather Observation",
+              "duration": 15,
+              "description": "Go outside and observe current weather conditions"
+            },
+            {
+              "name": "Data Collection",
+              "duration": 20,
+              "description": "Use tools to measure temperature, wind, precipitation"
+            },
+            {
+              "name": "Recording Data",
+              "duration": 15,
+              "description": "Record observations on weather chart"
+            },
+            {
+              "name": "Pattern Discussion",
+              "duration": 10,
+              "description": "Discuss patterns noticed over time"
+            }
+          ],
+          "assessment": {
+            "formative": "Daily weather observations",
+            "summative": "Weekly weather pattern analysis"
+          }
+        }
+      ]
+    },
+    "english_language_arts": {
+      "name": "English Language Arts",
+      "icon": "book-open",
+      "color": "#FF9800",
+      "description": "Reading, writing, speaking, and listening",
+      "standards": ["Common Core ELA", "State Reading Standards"],
+      "gradeLevels": ["K", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
+      "templates": [
+        {
+          "id": "ela-story-elements",
+          "name": "Story Elements",
+          "description": "Identifying characters, setting, plot in stories",
+          "duration": 50,
+          "gradeLevels": ["1", "2", "3"],
+          "objectives": [
+            "Students will identify main characters in a story",
+            "Students will describe the setting of a story",
+            "Students will retell the main events of a story"
+          ],
+          "materials": [
+            "Picture book",
+            "Story elements graphic organizer",
+            "Crayons/markers",
+            "Chart paper"
+          ],
+          "activities": [
+            {
+              "name": "Story Reading",
+              "duration": 15,
+              "description": "Read aloud a picture book to the class"
+            },
+            {
+              "name": "Element Identification",
+              "duration": 20,
+              "description": "Identify characters, setting, plot together"
+            },
+            {
+              "name": "Graphic Organizer",
+              "duration": 10,
+              "description": "Complete story elements organizer"
+            },
+            {
+              "name": "Story Retelling",
+              "duration": 5,
+              "description": "Students retell story using elements"
+            }
+          ],
+          "assessment": {
+            "formative": "Story elements graphic organizer",
+            "summative": "Story retelling rubric"
+          }
+        }
+      ]
+    },
+    "social_studies": {
+      "name": "Social Studies",
+      "icon": "globe",
+      "color": "#795548",
+      "description": "Understanding communities and cultures",
+      "standards": ["NCSS Standards", "State Social Studies Standards"],
+      "gradeLevels": ["K", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
+      "templates": [
+        {
+          "id": "social-community-helpers",
+          "name": "Community Helpers",
+          "description": "Learning about jobs that help our community",
+          "duration": 40,
+          "gradeLevels": ["K", "1"],
+          "objectives": [
+            "Students will identify different community helpers",
+            "Students will explain how community helpers help others",
+            "Students will appreciate the importance of community workers"
+          ],
+          "materials": [
+            "Community helper pictures",
+            "Job matching cards",
+            "Dress-up clothes",
+            "Drawing paper"
+          ],
+          "activities": [
+            {
+              "name": "Introduction",
+              "duration": 10,
+              "description": "Discuss what community helpers do"
+            },
+            {
+              "name": "Helper Identification",
+              "duration": 15,
+              "description": "Match helpers to their jobs and tools"
+            },
+            {
+              "name": "Role Play",
+              "duration": 10,
+              "description": "Act out different community helper jobs"
+            },
+            {
+              "name": "Thank You Cards",
+              "duration": 5,
+              "description": "Draw pictures to thank community helpers"
+            }
+          ],
+          "assessment": {
+            "formative": "Job matching activity",
+            "summative": "Community helper presentation"
+          }
+        }
+      ]
+    },
+    "performing_arts": {
+      "name": "Performing Arts",
+      "icon": "music",
+      "color": "#9C27B0",
+      "description": "Music, dance, and theater expression",
+      "standards": ["National Arts Standards", "State Arts Standards"],
+      "gradeLevels": ["K", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
+      "templates": [
+        {
+          "id": "performing-rhythm-patterns",
+          "name": "Rhythm Patterns",
+          "description": "Creating and performing simple rhythm patterns",
+          "duration": 30,
+          "gradeLevels": ["K", "1", "2"],
+          "objectives": [
+            "Students will clap steady beats",
+            "Students will create simple rhythm patterns",
+            "Students will perform rhythms with instruments"
+          ],
+          "materials": [
+            "Rhythm sticks",
+            "Tambourines",
+            "Recorded music",
+            "Rhythm cards"
+          ],
+          "activities": [
+            {
+              "name": "Warm-up Clapping",
+              "duration": 5,
+              "description": "Clap along to steady beat"
+            },
+            {
+              "name": "Pattern Practice",
+              "duration": 15,
+              "description": "Practice rhythm patterns with instruments"
+            },
+            {
+              "name": "Create Patterns",
+              "duration": 7,
+              "description": "Students create their own rhythm patterns"
+            },
+            {
+              "name": "Performance",
+              "duration": 3,
+              "description": "Perform patterns for the class"
+            }
+          ],
+          "assessment": {
+            "formative": "Rhythm pattern performance",
+            "summative": "Musical ensemble participation"
+          }
+        }
+      ]
+    }
+  },
+  "commonActivities": [
+    {
+      "name": "Think-Pair-Share",
+      "description": "Students think individually, discuss with partner, share with class",
+      "duration": "10-15 minutes",
+      "applicableSubjects": ["all"]
+    },
+    {
+      "name": "Exit Ticket",
+      "description": "Quick assessment of understanding before leaving",
+      "duration": "3-5 minutes",
+      "applicableSubjects": ["all"]
+    },
+    {
+      "name": "Gallery Walk",
+      "description": "Students view and discuss posted work around the room",
+      "duration": "15-20 minutes",
+      "applicableSubjects": ["all"]
+    }
+  ]
+}

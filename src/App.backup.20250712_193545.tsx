@@ -1,3 +1,19 @@
+// This file contains the main application code for a React app with authentication and role-based routing using React Router and Supabase.
+// It includes public and protected routes, role-based dashboards, and accessibility features.
+// The app is structured to provide a seamless user experience for admins, teachers, and students,
+// with a focus on security and usability.
+// The code also includes error handling and loading states to enhance the user experience.
+// The app uses React Context for global state management and includes a skip link for accessibility.
+// The main components are organized into separate directories for better maintainability.
+// The app is designed to be responsive and user-friendly, with a focus on accessibility for all users.
+// The code is modular, with separate components for authentication, layout, and pages.
+// The app also includes a screen reader announcements region and keyboard navigation support for better accessibility.
+// The app is ready to be extended with additional features like lessons, classes, and reports in the future.
+// The code is well-structured and follows best practices for React development, making it easy to maintain and extend.
+// The app is designed to be scalable, allowing for future enhancements and additional features.
+// The use of TypeScript ensures type safety and better developer experience, while the React Router provides a
+// flexible routing solution for the application.
+// This App.tsx includes the AuthProvider:
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider, useAuth } from './contexts/AuthContext';
