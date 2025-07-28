@@ -49,3 +49,11 @@ Thumbs.db
 # Database
 *.db
 *.sqlite
+
+# Project specific
+downloads/
+.env.local
+.env.production
+
+# Supabase
+.supabase/
