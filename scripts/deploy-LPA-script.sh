@@ -1,9 +1,8 @@
 #!/bin/bash
 
-# PATH: scripts/multi_platform_deploy-script.sh
 # Lesson Plan App - Deployment Script
 # Purpose: Build and deploy PWA, iOS, Android, and web versions
-# Author:  rituzangle/lesson-plan-app
+# Author: Auto-generated for rituzangle/lesson-plan-app
 # Platform: macOS M3 optimized
 
 set -e  # Exit on any error
@@ -89,7 +88,7 @@ clean_builds() {
 
 # Install dependencies
 install_dependencies() {
-    log_info " Clean Installing NPM dependencies..."
+    log_info "📦 Installing dependencies..."
     
     npm ci
     
@@ -98,7 +97,7 @@ install_dependencies() {
 
 # Build PWA version
 build_pwa() {
-    log_info "Building PWA version..."
+    log_info "🌐 Building PWA version..."
     
     # Set production environment
     export NODE_ENV=production
@@ -115,7 +114,7 @@ build_pwa() {
 
 # Create PWA manifest
 create_pwa_manifest() {
-    log_info "Creating PWA manifest..."
+    log_info "📱 Creating PWA manifest..."
     
     cat > web-build/manifest.json << EOF
 {
@@ -129,7 +128,7 @@ create_pwa_manifest() {
   "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "/assets/icon/icon-192.png",
+      "src": "/assets/icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "maskable any"

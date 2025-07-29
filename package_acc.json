@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "expo start",
-    "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
+    "android": "expo start --android",
     "build": "expo build",
     "build:android": "eas build --platform android",
     "build:ios": "eas build --platform ios",
@@ -19,9 +19,9 @@
     "lint:fix": "eslint src/ --fix",
     "type-check": "tsc --noEmit",
     "setup": "bash ./scripts/setup.sh",
-    "code-gen": "python ./scripts/code-gen.py",
-    "git-sync": "bash ./scripts/git-sync.sh",
-    "deploy": "bash ./scripts/deploy-script.sh"
+    "code-gen": "python ./scripts/code-LPA-gen.py",
+    "git-sync": "bash ./scripts/git-LPA-sync-script.sh",
+    "deploy": "bash ./scripts/deploy-LPA-script.sh"
   },
   "keywords": [
     "education",

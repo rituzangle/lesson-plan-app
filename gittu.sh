@@ -5,9 +5,9 @@ git add .
 echo "git commit -m \"Deploy updates $(date +%b-%d-%Y)\"" # Jul-14-2025
 
 # echo 'git commit -m "Deploy updates $(date +%m-%d-%Y)"' # 7-14-2025
-echo "git push -u origin main"
+# echo "git push -u origin main only first time after init"
 
-
+echo "git push"
 #
 #  Explanation:
 #

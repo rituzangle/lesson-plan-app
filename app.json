@@ -85,7 +85,7 @@
       }
     },
     "scheme": "lesson-plan-app",
-    "privacy": "public",
+    
     "platforms": [
       "ios",
       "web"
