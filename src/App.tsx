@@ -10,11 +10,11 @@ import { LoginPage } from '@pages/auth/LoginPage';
 import { SignUpPage } from '@pages/auth/SignUpPage';
 import { DashboardPage } from '@pages/DashboardPage';
 import { AdminDashboard } from '@pages/admin/AdminDashboard';
-import { TeacherDashboard } from './pages/teacher/TeacherDashboard';
-import { StudentDashboard } from './pages/student/StudentDashboard';
-import { ProfilePage } from './pages/ProfilePage';
-import { AccessibilityPage } from './pages/AccessibilityPage';
-import { NotFoundPage } from './pages/NotFoundPage';
+import { TeacherDashboard } from '@pages/teacher/TeacherDashboard';
+import { StudentDashboard } from '@pages/student/StudentDashboard';
+import { ProfilePage } from '@pages/ProfilePage';
+import { AccessibilityPage } from '@pages/AccessibilityPage';
+import { NotFoundPage } from '@pages/NotFoundPage';
 
 // Import layout components (these might need adjustment if they rely on web-specific divs)
 // For now, I'll keep them, but they might need to be replaced with React Native Views

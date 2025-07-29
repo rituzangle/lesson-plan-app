@@ -2,10 +2,7 @@ import React, { createContext, useContext, useEffect, useState, ReactNode } from
 import { User, Session } from '@supabase/supabase-js';
 import { supabase } from '../lib/supabase';
 import { authService } from '../services/authService';
-// path for AuthContext.tsx?: src/context/AuthContext.js
-// Types for our multi-role system
-// Comprehensive AuthContext that handles our multi-role system with accessibility built-in
-// Here: define the context, provider, and any related functions for managing authentication state
+import { AccessibilityInfo, View, Text, StyleSheet, ActivityIndicator } from 'react-native';
 
 export type UserRole = 'admin' | 'teacher' | 'student';
 
@@ -19,7 +16,6 @@ export interface UserProfile {
   classIds?: string[];
   createdAt: string;
   updatedAt: string;
-  // Accessibility preferences
   accessibilitySettings?: {
     highContrast: boolean;
     fontSize: 'small' | 'medium' | 'large' | 'xl';
@@ -31,33 +27,27 @@ export interface UserProfile {
 }
 
 export interface AuthContextType {
-  // Core auth state
   user: User | null;
   userProfile: UserProfile | null;
   session: Session | null;
   loading: boolean;
   error: string | null;
   
-  // Auth methods
   signUp: (email: string, password: string, userData: Partial<UserProfile>) => Promise<void>;
   signIn: (email: string, password: string) => Promise<void>;
   signInWithOAuth: (provider: 'google' | 'apple') => Promise<void>;
   signOut: () => Promise<void>;
   
-  // Role management
   hasRole: (role: UserRole | UserRole[]) => boolean;
   isAdmin: () => boolean;
   isTeacher: () => boolean;
   isStudent: () => boolean;
   
-  // Profile management
   updateProfile: (updates: Partial<UserProfile>) => Promise<void>;
   updateAccessibilitySettings: (settings: Partial<UserProfile['accessibilitySettings']>) => Promise<void>;
   
-  // Accessibility helpers
   announceToScreenReader: (message: string) => void;
   
-  // Error handling
   clearError: () => void;
 }
 
@@ -74,25 +64,13 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  // Screen reader announcements
   const announceToScreenReader = (message: string) => {
-    const announcement = document.createElement('div');
-    announcement.setAttribute('aria-live', 'polite');
-    announcement.setAttribute('aria-atomic', 'true');
-    announcement.className = 'sr-only';
-    announcement.textContent = message;
-    document.body.appendChild(announcement);
-    
-    setTimeout(() => {
-      document.body.removeChild(announcement);
-    }, 1000);
+    AccessibilityInfo.announceForAccessibility(message);
   };
 
-  // Initialize auth state
   useEffect(() => {
     const initializeAuth = async () => {
       try {
-        // Get initial session
         const { data: { session: initialSession } } = await supabase.auth.getSession();
         
         if (initialSession) {
@@ -110,7 +88,6 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
 
     initializeAuth();
 
-    // Listen for auth changes
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
       async (event, session) => {
         console.log('Auth state changed:', event, session?.user?.email);
@@ -133,7 +110,6 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     return () => subscription.unsubscribe();
   }, []);
 
-  // Fetch user profile from database
   const fetchUserProfile = async (userId: string) => {
     try {
       const profile = await authService.getUserProfile(userId);
@@ -144,7 +120,6 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     }
   };
 
-  // Sign up new user
   const signUp = async (email: string, password: string, userData: Partial<UserProfile>) => {
     try {
       setLoading(true);
@@ -162,7 +137,6 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     }
   };
 
-  // Sign in existing user
   const signIn = async (email: string, password: string) => {
     try {
       setLoading(true);
@@ -180,7 +154,6 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     }
   };
 
-  // OAuth sign in
   const signInWithOAuth = async (provider: 'google' | 'apple') => {
     try {
       setLoading(true);
@@ -198,7 +171,6 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     }
   };
 
-  // Sign out
   const signOut = async () => {
     try {
       setLoading(true);
@@ -206,7 +178,6 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
       
       await authService.signOut();
       
-      // Clear local state
       setUser(null);
       setUserProfile(null);
       setSession(null);
@@ -221,7 +192,6 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     }
   };
 
-  // Role checking helpers
   const hasRole = (roles: UserRole | UserRole[]): boolean => {
     if (!userProfile) return false;
     const roleArray = Array.isArray(roles) ? roles : [roles];
@@ -232,7 +202,6 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const isTeacher = (): boolean => hasRole('teacher');
   const isStudent = (): boolean => hasRole('student');
 
-  // Update user profile
   const updateProfile = async (updates: Partial<UserProfile>) => {
     try {
       if (!user) throw new Error('No user logged in');
@@ -251,7 +220,6 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     }
   };
 
-  // Update accessibility settings
   const updateAccessibilitySettings = async (settings: Partial<UserProfile['accessibilitySettings']>) => {
     try {
       if (!userProfile) throw new Error('No user profile available');
@@ -270,37 +238,30 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     }
   };
 
-  // Clear error state
   const clearError = () => setError(null);
 
   const value: AuthContextType = {
-    // State
     user,
     userProfile,
     session,
     loading,
     error,
     
-    // Methods
     signUp,
     signIn,
     signInWithOAuth,
     signOut,
     
-    // Role helpers
     hasRole,
     isAdmin,
     isTeacher,
     isStudent,
     
-    // Profile management
     updateProfile,
     updateAccessibilitySettings,
     
-    // Accessibility
     announceToScreenReader,
     
-    // Error handling
     clearError,
   };
 
@@ -311,7 +272,37 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   );
 };
 
-// Custom hook to use auth context
+const styles = StyleSheet.create({
+  loadingContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 20,
+  },
+  loadingText: {
+    marginTop: 10,
+    fontSize: 16,
+    color: '#666',
+  },
+  accessDeniedContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 20,
+    backgroundColor: '#f0f0f0',
+  },
+  accessDeniedTitle: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    marginBottom: 10,
+  },
+  accessDeniedText: {
+    fontSize: 16,
+    textAlign: 'center',
+    color: '#666',
+  },
+});
+
 export const useAuth = (): AuthContextType => {
   const context = useContext(AuthContext);
   if (context === undefined) {
@@ -320,7 +311,6 @@ export const useAuth = (): AuthContextType => {
   return context;
 };
 
-// Higher-order component for role-based access
 export const withRoleAccess = <P extends object>(
   Component: React.ComponentType<P>,
   allowedRoles: UserRole[]
@@ -330,40 +320,28 @@ export const withRoleAccess = <P extends object>(
     
     if (loading) {
       return (
-        <div 
-          className="flex items-center justify-center p-8"
-          role="status"
-          aria-live="polite"
-        >
-          <span className="sr-only">Loading authentication...</span>
-          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
-        </div>
+        <View style={styles.loadingContainer}>
+          <ActivityIndicator size="large" color="#0000ff" />
+          <Text style={styles.loadingText}>Loading authentication...</Text>
+        </View>
       );
     }
     
     if (!userProfile) {
       return (
-        <div 
-          className="text-center p-8"
-          role="alert"
-          aria-live="assertive"
-        >
-          <h2 className="text-xl font-semibold mb-4">Access Denied</h2>
-          <p>Please sign in to access this page.</p>
-        </div>
+        <View style={styles.accessDeniedContainer}>
+          <Text style={styles.accessDeniedTitle}>Access Denied</Text>
+          <Text style={styles.accessDeniedText}>Please sign in to access this page.</Text>
+        </View>
       );
     }
     
     if (!hasRole(allowedRoles)) {
       return (
-        <div 
-          className="text-center p-8"
-          role="alert"
-          aria-live="assertive"
-        >
-          <h2 className="text-xl font-semibold mb-4">Access Denied</h2>
-          <p>You don't have permission to view this page.</p>
-        </div>
+        <View style={styles.accessDeniedContainer}>
+          <Text style={styles.accessDeniedTitle}>Access Denied</Text>
+          <Text style={styles.accessDeniedText}>You don't have permission to view this page.</Text>
+        </View>
       );
     }
     

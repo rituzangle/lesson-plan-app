@@ -76,7 +76,7 @@
         "src/adaptive/*"
       ],
       "@pages/*": [
-        "pages/*"
+        "src/pages/*"
       ]
     },
     "typeRoots": [

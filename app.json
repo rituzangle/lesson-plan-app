@@ -7,7 +7,7 @@
     "icon": "./assets/icons/icon.png",
     "userInterfaceStyle": "automatic",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/icons/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -31,27 +31,7 @@
         "usesNonExemptEncryption": false
       }
     },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
-      },
-      "package": "com.rituzangle.lessonplanapp",
-      "versionCode": 1,
-      "permissions": [
-        "CAMERA",
-        "RECORD_AUDIO",
-        "READ_EXTERNAL_STORAGE",
-        "WRITE_EXTERNAL_STORAGE",
-        "VIBRATE",
-        "INTERNET",
-        "ACCESS_NETWORK_STATE",
-        "WAKE_LOCK",
-        "MODIFY_AUDIO_SETTINGS",
-        "ACCESS_FINE_LOCATION",
-        "ACCESS_COARSE_LOCATION"
-      ]
-    },
+    
     "web": {
       "favicon": "./assets/favicon.png",
       "name": "Lesson Plan App",
@@ -94,18 +74,7 @@
     },
     "plugins": [
       "expo-notifications",
-      "expo-document-picker",
-      [
-        "expo-font",
-        {
-          "fonts": [
-            "./assets/fonts/OpenDyslexic-Regular.otf",
-            "./assets/fonts/OpenDyslexic-Bold.otf",
-            "./assets/fonts/Atkinson-Hyperlegible-Regular.ttf",
-            "./assets/fonts/Atkinson-Hyperlegible-Bold.ttf"
-          ]
-        }
-      ]
+      "expo-document-picker"
     ],
     "experiments": {
       "typedRoutes": true
@@ -119,7 +88,6 @@
     "privacy": "public",
     "platforms": [
       "ios",
-      "android",
       "web"
     ],
     "primaryColor": "#4A90E2",
