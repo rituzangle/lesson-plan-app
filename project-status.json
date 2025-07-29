@@ -1,19 +1,53 @@
 {
-  "timestamp": "2025-07-12T22:17:35.072093",
+  "timestamp": "2025-07-28T23:28:24.176224",
   "project_root": "/Users/mommy/Documents/apps/lesson_plan_App",
   "sections": {
     "git_status": {
       "is_git_repo": true,
       "uncommitted_changes": true,
       "changes": [
-        "?? project-status-report.md",
-        "?? project-status-reporter.py",
-        "?? scripts/pies/project-status-reporter.py",
-        "?? scripts/project-status-reporter.py",
-        "?? src/App-New.tsx",
-        "?? src/types/supabase.ts"
+        "D lesson_plan_app/.gitignore",
+        " D lesson_plan_app/README.md",
+        " D lesson_plan_app/app.json",
+        " D lesson_plan_app/app/(tabs)/_layout.tsx",
+        " D lesson_plan_app/app/(tabs)/explore.tsx",
+        " D lesson_plan_app/app/(tabs)/index.tsx",
+        " D lesson_plan_app/app/+not-found.tsx",
+        " D lesson_plan_app/app/_layout.tsx",
+        " D lesson_plan_app/assets/fonts/SpaceMono-Regular.ttf",
+        " D lesson_plan_app/assets/images/adaptive-icon.png",
+        " D lesson_plan_app/assets/images/favicon.png",
+        " D lesson_plan_app/assets/images/icon.png",
+        " D lesson_plan_app/assets/images/partial-react-logo.png",
+        " D lesson_plan_app/assets/images/react-logo.png",
+        " D lesson_plan_app/assets/images/react-logo@2x.png",
+        " D lesson_plan_app/assets/images/react-logo@3x.png",
+        " D lesson_plan_app/assets/images/splash-icon.png",
+        " D lesson_plan_app/components/Collapsible.tsx",
+        " D lesson_plan_app/components/ExternalLink.tsx",
+        " D lesson_plan_app/components/HapticTab.tsx",
+        " D lesson_plan_app/components/HelloWave.tsx",
+        " D lesson_plan_app/components/ParallaxScrollView.tsx",
+        " D lesson_plan_app/components/ThemedText.tsx",
+        " D lesson_plan_app/components/ThemedView.tsx",
+        " D lesson_plan_app/components/ui/IconSymbol.ios.tsx",
+        " D lesson_plan_app/components/ui/IconSymbol.tsx",
+        " D lesson_plan_app/components/ui/TabBarBackground.ios.tsx",
+        " D lesson_plan_app/components/ui/TabBarBackground.tsx",
+        " D lesson_plan_app/constants/Colors.ts",
+        " D lesson_plan_app/eslint.config.js",
+        " D lesson_plan_app/hooks/useColorScheme.ts",
+        " D lesson_plan_app/hooks/useColorScheme.web.ts",
+        " D lesson_plan_app/hooks/useThemeColor.ts",
+        " D lesson_plan_app/package-lock.json",
+        " D lesson_plan_app/package.json",
+        " D lesson_plan_app/scripts/reset-project.js",
+        " D lesson_plan_app/tsconfig.json",
+        " M project-status-report.md",
+        " M project-status.json",
+        "?? project-status-report.md_old"
       ],
-      "current_branch": "main",
+      "current_branch": "master",
       "sync_status": "synced"
     },
     "structure": {
@@ -71,8 +105,8 @@
     "dependencies": {
       "package_json_exists": true,
       "node_modules_exists": true,
-      "dependencies_count": 59,
-      "dev_dependencies_count": 22,
+      "dependencies_count": 65,
+      "dev_dependencies_count": 24,
       "scripts": [
         "start",
         "android",
@@ -143,17 +177,17 @@
       "README.md": {
         "exists": true,
         "size": 3690,
-        "last_modified": 1752197050.8344233
+        "last_modified": 1753769238.6054063
       },
       "docs/architecture.md": {
         "exists": true,
         "size": 10248,
-        "last_modified": 1752098429.0505261
+        "last_modified": 1753769238.6039977
       },
       "for-claude.txt": {
         "exists": true,
-        "size": 2671,
-        "last_modified": 1752382217.9264352
+        "size": 3954,
+        "last_modified": 1752384009.4225066
       },
       "NEXT_TIME_CHECKLIST_7-12-25.md": {
         "exists": false,
