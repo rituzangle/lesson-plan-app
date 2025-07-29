@@ -86,3 +86,11 @@ downloads/
 
 # Supabase
 .supabase/
+
+# Project specific
+downloads/
+.env.local
+.env.production
+
+# Supabase
+.supabase/
