@@ -4,7 +4,7 @@
     "slug": "lesson-plan-app",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/icons/icon.png",
     "userInterfaceStyle": "automatic",
     "splash": {
       "image": "./assets/splash.png",
@@ -93,21 +93,8 @@
       ]
     },
     "plugins": [
-      "expo-camera",
-      "expo-av",
       "expo-notifications",
       "expo-document-picker",
-      "expo-print",
-      "expo-sharing",
-      "expo-speech",
-      "expo-haptics",
-      "expo-localization",
-      [
-        "expo-screen-orientation",
-        {
-          "initialOrientation": "PORTRAIT"
-        }
-      ],
       [
         "expo-font",
         {

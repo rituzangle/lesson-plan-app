@@ -36,19 +36,48 @@
     "noImplicitOverride": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"],
-      "@/components/*": ["src/components/*"],
-      "@/screens/*": ["src/screens/*"],
-      "@/services/*": ["src/services/*"],
-      "@/utils/*": ["src/utils/*"],
-      "@/types/*": ["src/types/*"],
-      "@/navigation/*": ["src/navigation/*"],
-      "@/styles/*": ["src/styles/*"],
-      "@/assets/*": ["assets/*"],
-      "@/docs/*": ["docs/*"],
-      "@/accessibility/*": ["src/accessibility/*"],
-      "@/curriculum/*": ["src/curriculum/*"],
-      "@/adaptive/*": ["src/adaptive/*"]
+      "@/*": [
+        "src/*"
+      ],
+      "@/components/*": [
+        "src/components/*"
+      ],
+      "@/screens/*": [
+        "src/screens/*"
+      ],
+      "@/services/*": [
+        "src/services/*"
+      ],
+      "@/utils/*": [
+        "src/utils/*"
+      ],
+      "@/types/*": [
+        "src/types/*"
+      ],
+      "@/navigation/*": [
+        "src/navigation/*"
+      ],
+      "@/styles/*": [
+        "src/styles/*"
+      ],
+      "@/assets/*": [
+        "assets/*"
+      ],
+      "@/docs/*": [
+        "docs/*"
+      ],
+      "@/accessibility/*": [
+        "src/accessibility/*"
+      ],
+      "@/curriculum/*": [
+        "src/curriculum/*"
+      ],
+      "@/adaptive/*": [
+        "src/adaptive/*"
+      ],
+      "@pages/*": [
+        "pages/*"
+      ]
     },
     "typeRoots": [
       "./node_modules/@types",
@@ -67,7 +96,8 @@
     "app.json",
     "expo-env.d.ts",
     "metro.config.js",
-    "babel.config.js"
+    "babel.config.js",
+    ".expo/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",

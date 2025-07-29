@@ -41,6 +41,9 @@ fi
 echo -e "${BLUE}📁 Creating directory structure...${NC}"
 mkdir -p src/components
 mkdir -p src/screens
+mkdir -p src/pages/teacher
+mkdir -p src/pages/student
+mkdir -p src/pages/admin
 mkdir -p src/services
 mkdir -p src/lib
 mkdir -p src/types
@@ -98,6 +101,11 @@ place_file "UserGreeting.tsx" "src/components/"
 # Screens
 place_file "LessonEditor.tsx" "src/screens/"
 place_file "LessonList.tsx" "src/screens/"
+
+# Pages
+place_file "TeacherDashboard.tsx" "src/pages/teacher/"
+place_file "StudentDashboard.tsx" "src/pages/student/"
+place_file "ProfilePage.tsx" "src/pages/"
 
 # Documentation
 place_file "architecture.md" "docs/"

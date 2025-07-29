@@ -2,7 +2,7 @@
   "name": "lesson-plan-app",
   "version": "1.0.0",
   "description": "Inclusive K-12 lesson planning app with accessibility-first design",
-  "main": "index.js",
+  "main": "src/App.tsx",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
@@ -80,6 +80,7 @@
     "expo-system-ui": "~5.0.10",
     "expo-web-browser": "~14.2.0",
     "lodash": "^4.17.21",
+    "nvm": "^0.0.4",
     "react": "19.1.0",
     "react-hook-form": "^7.60.0",
     "react-native": "0.80.1",
