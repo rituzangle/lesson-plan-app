@@ -4,6 +4,8 @@
 # downloads and temp
 downloads/
 
+src/screens/WebFriendlyLogin.tsx
+!src/screens/WebFriendlyLogin.tsx.gpg
 # Environment Config
 .env*
 
