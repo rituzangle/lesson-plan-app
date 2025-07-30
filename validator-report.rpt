@@ -1,0 +1,393 @@
+🔍 Validating imports and dependencies...
+📄 Checking: src/database/schema.ts
+📄 Checking: src/database/testDatabase.ts
+📄 Checking: src/types/storage.ts
+📄 Checking: src/types/lesson.types.ts
+📄 Checking: src/types/index.ts
+📄 Checking: src/types/supabase.ts
+📄 Checking: src/types/auth.ts
+📄 Checking: src/utils/storageErrors.ts
+📄 Checking: src/utils/encryption.ts
+📄 Checking: src/screens/index.ts
+📄 Checking: src/components/web-layout-fix.ts
+📄 Checking: src/components/ClassOverview.ts
+📄 Checking: src/components/index.ts
+📄 Checking: src/hooks/index.ts
+📄 Checking: src/lib/supabase.ts
+📄 Checking: src/data/index.ts
+📄 Checking: src/services/encryption.service.ts
+📄 Checking: src/services/storage.ts
+📄 Checking: src/services/authService.ts
+📄 Checking: src/services/api.ts
+📄 Checking: src/services/StorageService.ts
+📄 Checking: src/services/lesson.service.ts
+📄 Checking: src/data/curriculum/performing_arts_curriculum.ts
+📄 Checking: src/data/templates/performing_arts_templates.ts
+📄 Checking: src/components/teacher/index.ts
+📄 Checking: src/App.tsx
+📄 Checking: src/database/testDatabase.tsx
+📄 Checking: src/database/schema.tsx
+📄 Checking: src/types/auth.tsx
+📄 Checking: src/types/accessibility_types.tsx
+📄 Checking: src/types/assessment.tsx
+📄 Checking: src/contexts/AuthContext.tsx
+📄 Checking: src/config/supabase_config.tsx
+📄 Checking: src/auth/supabase.tsx
+📄 Checking: src/auth/AuthService.tsx
+📄 Checking: src/auth/types.tsx
+📄 Checking: src/utils/accessibleLogin.tsx
+📄 Checking: src/utils/accessibilityConstants.tsx
+📄 Checking: src/utils/ErrorBoundary.tsx
+📄 Checking: src/screens/WebFriendlyLogin.tsx
+📄 Checking: src/screens/LessonList.tsx
+📄 Checking: src/screens/VoiceInput.tsx
+📄 Checking: src/screens/LessonEditor.tsx
+📄 Checking: src/screens/TeacherDashboard.tsx
+📄 Checking: src/components/LessonCard.tsx
+📄 Checking: src/components/AccessibilityButton.tsx
+📄 Checking: src/components/QRCodeLogin.tsx
+📄 Checking: src/components/VoiceInput.tsx
+📄 Checking: src/components/UserGreeting.tsx
+📄 Checking: src/components/WebLayoutFix.tsx
+📄 Checking: src/components/LoadingSpinner.tsx
+📄 Checking: src/components/StorageStats.tsx
+📄 Checking: src/components/AuthContext.tsx
+📄 Checking: src/components/QuickLessonCreator.tsx
+📄 Checking: src/components/UserOnboarding.tsx
+📄 Checking: src/components/Header.tsx
+📄 Checking: src/components/ErrorBoundary.tsx
+📄 Checking: src/pages/ProfilePage.tsx
+📄 Checking: src/pages/NotFoundPage.tsx
+📄 Checking: src/pages/AccessibilityPage.tsx
+📄 Checking: src/pages/DashboardPage.tsx
+📄 Checking: src/services/auth.tsx
+📄 Checking: src/services/storage_service.tsx
+📄 Checking: src/services/encryptionService.tsx
+📄 Checking: src/services/authService.tsx
+📄 Checking: src/services/storage.tsx
+📄 Checking: src/services/authService.backup.20250712_193545.tsx
+📄 Checking: src/services/api.tsx
+📄 Checking: src/services/types/storage_types.tsx
+📄 Checking: src/pages/auth/LoginPage.tsx
+📄 Checking: src/pages/auth/LoginPage copy.tsx
+📄 Checking: src/pages/auth/SignUpPage.tsx
+📄 Checking: src/pages/student/StudentDashboard.tsx
+📄 Checking: src/pages/admin/AdminDashboard.tsx
+📄 Checking: src/pages/teacher/TeacherDashboard.tsx
+📄 Checking: src/components/ui/SubjectSelector.tsx
+📄 Checking: src/components/ui/TemplateSelector.tsx
+📄 Checking: src/components/ui/Button.tsx
+📄 Checking: src/components/forms/LessonEditor.tsx
+📄 Checking: src/components/layout/AuthLayout.tsx
+📄 Checking: src/components/layout/AppLayout.tsx
+📄 Checking: src/components/assessment/assessment_engine_foundation.tsx
+📄 Checking: src/components/assessment/AssessmentEngine.tsx
+📄 Checking: src/components/teacher/ClassOverview.tsx
+📄 Checking: src/components/teacher/QuickLessonCreator.tsx
+📄 Checking: src/screens/auth/WelcomeScreen.tsx
+📄 Checking: src/screens/auth/SetupScreen.tsx
+📄 Checking: src/screens/auth/UserTypeScreen.tsx
+📄 Checking: src/screens/parent/ChildManagementScreen.tsx
+📄 Checking: src/screens/parent/ReportsScreen.tsx
+📄 Checking: src/screens/parent/ParentHomeScreen.tsx
+📄 Checking: src/screens/lesson/LessonPlanScreen.tsx
+📄 Checking: src/screens/lesson/LessonViewScreen.tsx
+📄 Checking: src/screens/lesson/LessonBuilderScreen.tsx
+
+============================================================
+📊 DEPENDENCY VALIDATION REPORT
+============================================================
+
+📈 Summary:
+  Total files scanned: 94
+  Authentic files: 23
+  Missing dependencies: 27
+  Broken imports: 54
+  Naming issues: 19
+
+❌ Missing Files:
+  - components/BiometricLogin
+  - components/QRCodeLogin
+  - components/VoiceInput
+  - contexts/AuthContext
+  - src/AccessibilityButton
+  - src/assets/search-icon.png
+  - src/auth/AuthContext
+  - src/components/BiometricLogin
+  - src/components/HeaderBackButton
+  - src/components/HeaderBackground
+  - src/components/HeaderButton
+  - src/components/HeaderIcon
+  - src/components/HeaderSearchBar
+  - src/components/HeaderShownContext
+  - src/components/HeaderTitle
+  - src/components/Navigation
+  - src/components/components/UserOnboarding
+  - src/components/getDefaultHeaderHeight
+  - src/config/types
+  - src/context/AuthContext
+  - src/screens/LessonCard
+  - src/services/encryption
+  - src/services/lesson.service
+  - src/types/lesson.types
+  - src/useFrameSize
+  - src/utils/Header
+  - src/utils/Navigation
+
+🔗 Broken Imports:
+  - src/services/storage.ts:6 → ./encryption
+    (resolves to: src/services/encryption)
+  - src/services/lesson.service.ts:2 → ../types/lesson.types
+    (resolves to: src/types/lesson.types)
+  - src/App.tsx:5 → ./context/AuthContext
+    (resolves to: src/context/AuthContext)
+  - src/config/supabase_config.tsx:5 → ./types
+    (resolves to: src/config/types)
+  - src/utils/accessibleLogin.tsx:5 → ../../contexts/AuthContext
+    (resolves to: contexts/AuthContext)
+  - src/utils/accessibleLogin.tsx:6 → ../../components/VoiceInput
+    (resolves to: components/VoiceInput)
+  - src/utils/accessibleLogin.tsx:7 → ../../components/QRCodeLogin
+    (resolves to: components/QRCodeLogin)
+  - src/utils/accessibleLogin.tsx:8 → ../../components/BiometricLogin
+    (resolves to: components/BiometricLogin)
+  - src/utils/ErrorBoundary.tsx:91 → ../../contexts/AuthContext
+    (resolves to: contexts/AuthContext)
+  - src/utils/ErrorBoundary.tsx:92 → ./Navigation
+    (resolves to: src/utils/Navigation)
+  - src/utils/ErrorBoundary.tsx:93 → ./Header
+    (resolves to: src/utils/Header)
+  - src/utils/ErrorBoundary.tsx:146 → ../../contexts/AuthContext
+    (resolves to: contexts/AuthContext)
+  - src/utils/ErrorBoundary.tsx:147 → ../AccessibilityButton
+    (resolves to: src/AccessibilityButton)
+  - src/utils/ErrorBoundary.tsx:191 → ../../contexts/AuthContext
+    (resolves to: contexts/AuthContext)
+  - src/screens/WebFriendlyLogin.tsx:16 → ../auth/AuthContext
+    (resolves to: src/auth/AuthContext)
+  - src/screens/LessonList.tsx:3 → ./LessonCard
+    (resolves to: src/screens/LessonCard)
+  - src/components/AccessibilityButton.tsx:130 → ../../contexts/AuthContext
+    (resolves to: contexts/AuthContext)
+  - src/components/AccessibilityButton.tsx:131 → ./Navigation
+    (resolves to: src/components/Navigation)
+  - src/components/AccessibilityButton.tsx:157 → ../../contexts/AuthContext
+    (resolves to: contexts/AuthContext)
+  - src/components/AccessibilityButton.tsx:158 → ../AccessibilityButton
+    (resolves to: src/AccessibilityButton)
+  - src/components/AccessibilityButton.tsx:210 → ../../contexts/AuthContext
+    (resolves to: contexts/AuthContext)
+  - src/components/UserOnboarding.tsx:18 → ./components/UserOnboarding
+    (resolves to: src/components/components/UserOnboarding)
+  - src/components/Header.tsx:14 → ../assets/search-icon.png
+    (resolves to: src/assets/search-icon.png)
+  - src/components/Header.tsx:16 → ../useFrameSize
+    (resolves to: src/useFrameSize)
+  - src/components/Header.tsx:17 → ./getDefaultHeaderHeight
+    (resolves to: src/components/getDefaultHeaderHeight)
+  - src/components/Header.tsx:18 → ./HeaderBackButton
+    (resolves to: src/components/HeaderBackButton)
+  - src/components/Header.tsx:19 → ./HeaderBackground
+    (resolves to: src/components/HeaderBackground)
+  - src/components/Header.tsx:20 → ./HeaderButton
+    (resolves to: src/components/HeaderButton)
+  - src/components/Header.tsx:21 → ./HeaderIcon
+    (resolves to: src/components/HeaderIcon)
+  - src/components/Header.tsx:22 → ./HeaderSearchBar
+    (resolves to: src/components/HeaderSearchBar)
+  - src/components/Header.tsx:23 → ./HeaderShownContext
+    (resolves to: src/components/HeaderShownContext)
+  - src/components/Header.tsx:24 → ./HeaderTitle
+    (resolves to: src/components/HeaderTitle)
+  - src/components/ErrorBoundary.tsx:91 → ../../contexts/AuthContext
+    (resolves to: contexts/AuthContext)
+  - src/components/ErrorBoundary.tsx:92 → ./Navigation
+    (resolves to: src/components/Navigation)
+  - src/components/ErrorBoundary.tsx:146 → ../../contexts/AuthContext
+    (resolves to: contexts/AuthContext)
+  - src/components/ErrorBoundary.tsx:147 → ../AccessibilityButton
+    (resolves to: src/AccessibilityButton)
+  - src/components/ErrorBoundary.tsx:191 → ../../contexts/AuthContext
+    (resolves to: contexts/AuthContext)
+  - src/pages/AccessibilityPage.tsx:3 → ../context/AuthContext
+    (resolves to: src/context/AuthContext)
+  - src/pages/DashboardPage.tsx:24 → ../../contexts/AuthContext
+    (resolves to: contexts/AuthContext)
+  - src/pages/DashboardPage.tsx:59 → ../../contexts/AuthContext
+    (resolves to: contexts/AuthContext)
+  - src/pages/DashboardPage.tsx:98 → ../../contexts/AuthContext
+    (resolves to: contexts/AuthContext)
+  - src/services/auth.tsx:13 → ./encryption
+    (resolves to: src/services/encryption)
+  - src/services/authService.tsx:13 → ./encryption
+    (resolves to: src/services/encryption)
+  - src/services/storage.tsx:6 → ./encryption
+    (resolves to: src/services/encryption)
+  - src/pages/auth/LoginPage.tsx:4 → ../../context/AuthContext
+    (resolves to: src/context/AuthContext)
+  - src/pages/auth/LoginPage copy.tsx:7 → ../../components/BiometricLogin
+    (resolves to: src/components/BiometricLogin)
+  - src/pages/student/StudentDashboard.tsx:3 → ../../context/AuthContext
+    (resolves to: src/context/AuthContext)
+  - src/pages/admin/AdminDashboard.tsx:3 → ../../context/AuthContext
+    (resolves to: src/context/AuthContext)
+  - src/pages/teacher/TeacherDashboard.tsx:3 → ../../context/AuthContext
+    (resolves to: src/context/AuthContext)
+  - src/components/ui/SubjectSelector.tsx:6 → ../../types/lesson.types
+    (resolves to: src/types/lesson.types)
+  - src/components/ui/TemplateSelector.tsx:6 → ../../types/lesson.types
+    (resolves to: src/types/lesson.types)
+  - src/components/ui/TemplateSelector.tsx:7 → ../../services/lesson.service
+    (resolves to: src/services/lesson.service)
+  - src/components/forms/LessonEditor.tsx:5 → ../../types/lesson.types
+    (resolves to: src/types/lesson.types)
+  - src/components/forms/LessonEditor.tsx:6 → ../../services/lesson.service
+    (resolves to: src/services/lesson.service)
+
+📝 Naming Issues:
+  - Component file should be PascalCase: /Users/mommy/Documents/apps/lesson_plan_App/src/database/testDatabase.tsx
+  - Component file should be PascalCase: /Users/mommy/Documents/apps/lesson_plan_App/src/database/schema.tsx
+  - Component file should be PascalCase: /Users/mommy/Documents/apps/lesson_plan_App/src/types/auth.tsx
+  - Component file should be PascalCase: /Users/mommy/Documents/apps/lesson_plan_App/src/types/accessibility_types.tsx
+  - Component file should be PascalCase: /Users/mommy/Documents/apps/lesson_plan_App/src/types/assessment.tsx
+  - Component file should be PascalCase: /Users/mommy/Documents/apps/lesson_plan_App/src/config/supabase_config.tsx
+  - Component file should be PascalCase: /Users/mommy/Documents/apps/lesson_plan_App/src/auth/supabase.tsx
+  - Component file should be PascalCase: /Users/mommy/Documents/apps/lesson_plan_App/src/auth/types.tsx
+  - Component file should be PascalCase: /Users/mommy/Documents/apps/lesson_plan_App/src/utils/accessibleLogin.tsx
+  - Component file should be PascalCase: /Users/mommy/Documents/apps/lesson_plan_App/src/utils/accessibilityConstants.tsx
+  - Component file should be PascalCase: /Users/mommy/Documents/apps/lesson_plan_App/src/services/auth.tsx
+  - Component file should be PascalCase: /Users/mommy/Documents/apps/lesson_plan_App/src/services/storage_service.tsx
+  - Component file should be PascalCase: /Users/mommy/Documents/apps/lesson_plan_App/src/services/encryptionService.tsx
+  - Component file should be PascalCase: /Users/mommy/Documents/apps/lesson_plan_App/src/services/authService.tsx
+  - Component file should be PascalCase: /Users/mommy/Documents/apps/lesson_plan_App/src/services/storage.tsx
+  - Component file should be PascalCase: /Users/mommy/Documents/apps/lesson_plan_App/src/services/authService.backup.20250712_193545.tsx
+  - Component file should be PascalCase: /Users/mommy/Documents/apps/lesson_plan_App/src/services/api.tsx
+  - Component file should be PascalCase: /Users/mommy/Documents/apps/lesson_plan_App/src/services/types/storage_types.tsx
+  - Component file should be PascalCase: /Users/mommy/Documents/apps/lesson_plan_App/src/components/assessment/assessment_engine_foundation.tsx
+
+✅ Authentic Files (first 10):
+  - src/auth/supabase.tsx
+  - src/auth/types.tsx
+  - src/components/AuthContext.tsx
+  - src/components/ErrorBoundary.tsx
+  - src/components/Header.tsx
+  - src/components/LoadingSpinner.tsx
+  - src/components/QRCodeLogin.tsx
+  - src/components/VoiceInput.tsx
+  - src/components/layout/AppLayout.tsx
+  - src/components/layout/AuthLayout.tsx
+  ... and 13 more
+
+🤔 Found 27 missing files.
+Would you like me to generate basic templates for these files?
+(This will help you understand what needs to be implemented)
+
+🏗️  Generating templates for missing files...
+📝 Would create: src/types/lesson.types
+   Template preview: // lesson.types
+// TODO: Implement this file
+...
+📝 Would create: src/AccessibilityButton
+   Template preview: // AccessibilityButton
+// TODO: Implement this file
+...
+📝 Would create: src/useFrameSize
+   Template preview: // useFrameSize
+// TODO: Implement this file
+...
+📝 Would create: src/utils/Navigation
+   Template preview: // Navigation
+// TODO: Implement this file
+...
+📝 Would create: src/components/HeaderBackButton
+   Template preview: // HeaderBackButton
+// TODO: Implement this file
+...
+📝 Would create: src/services/encryption
+   Template preview: // encryption
+// TODO: Implement this file
+...
+📝 Would create: src/assets/search-icon.png
+   Template preview: // search-icon.png
+// TODO: Implement this file
+...
+📝 Would create: src/config/types
+   Template preview: // types
+// TODO: Implement this file
+...
+📝 Would create: src/components/components/UserOnboarding
+   Template preview: // UserOnboarding
+// TODO: Implement this file
+...
+📝 Would create: contexts/AuthContext
+   Template preview: // AuthContext
+// TODO: Implement this file
+...
+📝 Would create: src/components/HeaderSearchBar
+   Template preview: // HeaderSearchBar
+// TODO: Implement this file
+...
+📝 Would create: src/components/BiometricLogin
+   Template preview: // BiometricLogin
+// TODO: Implement this file
+...
+📝 Would create: src/components/getDefaultHeaderHeight
+   Template preview: // getDefaultHeaderHeight
+// TODO: Implement this file
+...
+📝 Would create: src/components/HeaderBackground
+   Template preview: // HeaderBackground
+// TODO: Implement this file
+...
+📝 Would create: components/VoiceInput
+   Template preview: // VoiceInput
+// TODO: Implement this file
+...
+📝 Would create: src/components/HeaderShownContext
+   Template preview: // HeaderShownContext
+// TODO: Implement this file
+...
+📝 Would create: src/screens/LessonCard
+   Template preview: // LessonCard
+// TODO: Implement this file
+...
+📝 Would create: components/QRCodeLogin
+   Template preview: // QRCodeLogin
+// TODO: Implement this file
+...
+📝 Would create: src/components/HeaderButton
+   Template preview: // HeaderButton
+// TODO: Implement this file
+...
+📝 Would create: components/BiometricLogin
+   Template preview: // BiometricLogin
+// TODO: Implement this file
+...
+📝 Would create: src/services/lesson.service
+   Template preview: // lesson.service
+// TODO: Implement this file
+...
+📝 Would create: src/auth/AuthContext
+   Template preview: // AuthContext
+// TODO: Implement this file
+...
+📝 Would create: src/context/AuthContext
+   Template preview: // AuthContext
+// TODO: Implement this file
+...
+📝 Would create: src/components/HeaderIcon
+   Template preview: // HeaderIcon
+// TODO: Implement this file
+...
+📝 Would create: src/utils/Header
+   Template preview: // Header
+// TODO: Implement this file
+...
+📝 Would create: src/components/HeaderTitle
+   Template preview: // HeaderTitle
+// TODO: Implement this file
+...
+📝 Would create: src/components/Navigation
+   Template preview: // Navigation
+// TODO: Implement this file
+...
