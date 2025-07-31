@@ -11,8 +11,10 @@ import { Platform, View, Text, StyleSheet } from 'react-native';
 import { WebLayoutFix } from './src/components/WebLayoutFix';
 import { WebFriendlyLogin } from './src/screens/WebFriendlyLogin';
 import { TeacherDashboard } from './src/screens/TeacherDashboard';
-import { AuthProvider } from './src/contexts/AuthContext';
+import { AuthProvider } from './src/contexts/AuthContext'; //leaving here for context usage
 
+// Import emergency styles for web
+// import './src/styles/emergencyStyles.css'; not supported in React Native
 // Emergency CSS loading for web
 if (Platform.OS === 'web') {
   // Try to load emergency CSS from public folder
