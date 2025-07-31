@@ -1,5 +1,5 @@
-// TeacherDashboard.tsx - Auto-generated component
-// Path: src/screens/TeacherDashboard.tsx
+// QuickLessonCreator.tsx - Auto-generated component
+// Path: src/components/teacher/QuickLessonCreator.tsx
 // Generated: 2025-07-29 20:34:01 by code-gen.py
 
 import React from 'react';
@@ -9,14 +9,14 @@ import {
   StyleSheet,
 } from 'react-native';
 
-interface TeacherDashboardProps {
+interface QuickLessonCreatorProps {
   navigation?: any;
 }
 
-export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({ navigation }) => {
+export const QuickLessonCreator: React.FC<QuickLessonCreatorProps> = ({ navigation }) => {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>TeacherDashboard Component</Text>
+      <Text style={styles.title}>QuickLessonCreator Component</Text>
       <Text style={styles.subtitle}>Auto-generated on 2025-07-29 20:34:01</Text>
     </View>
   );

@@ -1,3 +1,24 @@
+/*
+ * USER ONBOARDING FLOW
+ * Path: src/components/UserOnboarding.tsx
+ * 
+ * Dependencies (auto-install):
+ * npm install @react-native-async-storage/async-storage crypto-js
+ * npm install --save-dev @types/crypto-js
+ * 
+ * Self-healing script: npm run setup:onboarding
+ * Add to package.json scripts:
+ * "setup:onboarding": "npm install @react-native-async-storage/async-storage crypto-js && npm install --save-dev @types/crypto-js"
+ * 
+ * Imports from:
+ * - ../database/schema (DatabaseManager, UserProfile, ChildProfile)
+ * - ../database/testDatabase (runDatabaseTests)
+ * 
+ * Usage:
+ * import UserOnboarding from './components/UserOnboarding';
+ * <UserOnboarding />
+ */
+
 import React, { useState, useEffect } from 'react';
 import { DatabaseManager, UserProfile, ChildProfile } from '../database/schema';
 import { runDatabaseTests } from '../database/testDatabase';

@@ -1,5 +1,5 @@
-// TeacherDashboard.tsx - Auto-generated component
-// Path: src/screens/TeacherDashboard.tsx
+// WebLayoutFix.tsx - Auto-generated component
+// Path: src/components/WebLayoutFix.tsx
 // Generated: 2025-07-29 20:34:01 by code-gen.py
 
 import React from 'react';
@@ -9,14 +9,14 @@ import {
   StyleSheet,
 } from 'react-native';
 
-interface TeacherDashboardProps {
+interface WebLayoutFixProps {
   navigation?: any;
 }
 
-export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({ navigation }) => {
+export const WebLayoutFix: React.FC<WebLayoutFixProps> = ({ navigation }) => {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>TeacherDashboard Component</Text>
+      <Text style={styles.title}>WebLayoutFix Component</Text>
       <Text style={styles.subtitle}>Auto-generated on 2025-07-29 20:34:01</Text>
     </View>
   );

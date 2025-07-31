@@ -2,8 +2,19 @@
 *.txt
 *.zip
 # downloads and temp
-downloads/
-
+downloads/*
+old_downloads/*
+*.rpt
+*.sh
+*.fish
+*.sh
+*.fish
+*.json
+gittu.sh
+suppa/
+database/
+./*.md
+!README.md
 src/screens/WebFriendlyLogin.tsx
 !src/screens/WebFriendlyLogin.tsx.gpg
 # Environment Config

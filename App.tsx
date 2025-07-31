@@ -1,21 +1,25 @@
-// App.tsx - Main application entry point with web layout fix
+// App.tsx - Main application entry point (ROOT LEVEL)
 // Path: App.tsx  
-// Created: 2025-07-28 for lesson-plan-app (updated for web-first)
 
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { AuthProvider } from './src/auth/AuthContext';
+import { Platform, View, Text, StyleSheet } from 'react-native';
+
+// Import from actual src/ structure in your repo
 import { WebLayoutFix } from './src/components/WebLayoutFix';
 import { WebFriendlyLogin } from './src/screens/WebFriendlyLogin';
 import { TeacherDashboard } from './src/screens/TeacherDashboard';
-import { LessonEditor } from './src/screens/LessonEditor';
-import { Platform } from 'react-native';
+import { AuthProvider } from './src/contexts/AuthContext';
 
-// Import web styles for better layout
+// Emergency CSS loading for web
 if (Platform.OS === 'web') {
-  require('./src/assets/emergency-web-styles.css');
+  // Try to load emergency CSS from public folder
+  const link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.href = '/emergency-web-styles.css';
+  document.head.appendChild(link);
 }
 
 const Stack = createNativeStackNavigator();
@@ -23,42 +27,68 @@ const Stack = createNativeStackNavigator();
 export default function App() {
   return (
     <WebLayoutFix>
-      <AuthProvider>
-        <NavigationContainer>
-          <Stack.Navigator
-            initialRouteName="Login"
-            screenOptions={{
-              headerShown: false, // Clean look for web
-              contentStyle: { backgroundColor: '#f8f9fa' }
+      <NavigationContainer>
+        <Stack.Navigator
+          initialRouteName="Login"
+          screenOptions={{
+            headerShown: false,
+            contentStyle: { backgroundColor: '#f8f9fa' }
+          }}
+        >
+          <Stack.Screen 
+            name="Login" 
+            component={WebFriendlyLogin}
+            options={{
+              title: 'Welcome to Lesson Plan App'
             }}
-          >
-            <Stack.Screen 
-              name="Login" 
-              component={WebFriendlyLogin}
-              options={{
-                title: 'Welcome to Lesson Plan App'
-              }}
-            />
-            <Stack.Screen 
-              name="TeacherDashboard" 
-              component={TeacherDashboard}
-              options={{
-                title: 'Teacher Dashboard'
-              }}
-            />
-            <Stack.Screen 
-              name="LessonEditor" 
-              component={LessonEditor}
-              options={{
-                title: 'Lesson Editor',
-                headerShown: true,
-                headerBackTitle: 'Back'
-              }}
-            />
-          </Stack.Navigator>
-        </NavigationContainer>
-        <StatusBar style="auto" />
-      </AuthProvider>
+          />
+          <Stack.Screen 
+            name="TeacherDashboard" 
+            component={TeacherDashboard}
+            options={{
+              title: 'Teacher Dashboard'
+            }}
+          />
+        </Stack.Navigator>
+      </NavigationContainer>
+      <StatusBar style="auto" />
     </WebLayoutFix>
   );
 }
+
+// Emergency inline styles for web
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    width: Platform.OS === 'web' ? '100vw' : '100%',
+    minHeight: Platform.OS === 'web' ? '100vh' : '100%',
+  },
+  placeholder: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 20,
+    backgroundColor: '#f0f2f5',
+  },
+  placeholderTitle: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#1976D2',
+    marginBottom: 16,
+    textAlign: 'center',
+  },
+  placeholderText: {
+    fontSize: 16,
+    color: '#666',
+    marginBottom: 12,
+    textAlign: 'center',
+  },
+  placeholderInfo: {
+    fontSize: 14,
+    color: '#4CAF50',
+    fontFamily: Platform.OS === 'web' ? 'monospace' : 'Courier',
+    backgroundColor: '#f5f5f5',
+    padding: 8,
+    borderRadius: 4,
+  },
+});

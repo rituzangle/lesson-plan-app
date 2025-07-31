@@ -88,7 +88,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 // components/layout/AppLayout.tsx
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import { useAuth } from '../../contexts/AuthContext';
+import { useAuth } from '../context/AuthContext';
 import { Navigation } from './Navigation';
 import { Header } from './Header';
 
@@ -143,7 +143,7 @@ export const AuthLayout: React.FC = () => {
 
 // components/layout/Header.tsx
 import React from 'react';
-import { useAuth } from '../../contexts/AuthContext';
+import { useAuth } from '../context/AuthContext';
 import { AccessibilityButton } from '../AccessibilityButton';
 
 export const Header: React.FC = () => {
@@ -188,7 +188,7 @@ export const Header: React.FC = () => {
 // components/layout/Navigation.tsx
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { useAuth } from '../../contexts/AuthContext';
+import { useAuth } from '../context/AuthContext';
 
 export const Navigation: React.FC = () => {
   const { userProfile } = useAuth();
@@ -238,7 +238,7 @@ export const Navigation: React.FC = () => {
 
 // components/AccessibilityButton.tsx
 import React, { useState } from 'react';
-import { useAuth } from '../contexts/AuthContext';
+import { useAuth } from '../context/AuthContext';
 
 export const AccessibilityButton: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);

@@ -1,138 +1,4 @@
-// components/VoiceInput.tsx
-import React, { useState, useEffect, useRef } from 'react';
-
-interface VoiceInputProps {
-  onResult: (value: string) => void;
-  placeholder: string;
-  value: string;
-  fieldType: 'email' | 'password' | 'text';
-}
-
-export const VoiceInput: React.FC<VoiceInputProps> = ({ 
-  onResult, 
-  placeholder, 
-  value, 
-  fieldType 
-}) => {
-  const [isListening, setIsListening] = useState(false);
-  const [isSupported, setIsSupported] = useState(false);
-  const recognitionRef = useRef<any>(null);
-
-  useEffect(() => {
-    // Check for speech recognition support
-    const SpeechRecognition = 
-      (window as any).SpeechRecognition || 
-      (window as any).webkitSpeechRecognition;
-    
-    if (SpeechRecognition) {
-      setIsSupported(true);
-      recognitionRef.current = new SpeechRecognition();
-      
-      // Configure speech recognition
-      recognitionRef.current.continuous = false;
-      recognitionRef.current.interimResults = false;
-      recognitionRef.current.lang = 'en-US';
-
-      recognitionRef.current.onresult = (event: any) => {
-        const transcript = event.results[0][0].transcript;
-        onResult(transcript.trim());
-        setIsListening(false);
-      };
-
-      recognitionRef.current.onerror = (event: any) => {
-        console.error('Speech recognition error:', event.error);
-        setIsListening(false);
-      };
-
-      recognitionRef.current.onend = () => {
-        setIsListening(false);
-      };
-    }
-
-    return () => {
-      if (recognitionRef.current) {
-        recognitionRef.current.stop();
-      }
-    };
-  }, [onResult]);
-
-  const startListening = () => {
-    if (recognitionRef.current && !isListening) {
-      setIsListening(true);
-      recognitionRef.current.start();
-    }
-  };
-
-  const stopListening = () => {
-    if (recognitionRef.current && isListening) {
-      recognitionRef.current.stop();
-      setIsListening(false);
-    }
-  };
-
-  if (!isSupported) {
-    return (
-      <div className="bg-yellow-50 border border-yellow-200 rounded-md p-4">
-        <p className="text-sm text-yellow-800">
-          Voice input is not supported in this browser. Please use keyboard input.
-        </p>
-      </div>
-    );
-  }
-
-  return (
-    <div className="space-y-2">
-      <label className="block text-sm font-medium text-gray-700">
-        {placeholder}
-      </label>
-      
-      <div className="flex space-x-2">
-        <input
-          type={fieldType === 'password' ? 'password' : 'text'}
-          value={value}
-          placeholder={`Speak your ${placeholder.toLowerCase()}`}
-          className="flex-1 px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-          readOnly
-        />
-        
-        <button
-          type="button"
-          onClick={isListening ? stopListening : startListening}
-          className={`px-4 py-2 rounded-md font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors ${
-            isListening
-              ? 'bg-red-600 hover:bg-red-700 text-white'
-              : 'bg-blue-600 hover:bg-blue-700 text-white'
-          }`}
-          aria-label={isListening ? 'Stop voice input' : 'Start voice input'}
-        >
-          {isListening ? (
-            <>
-              <span className="animate-pulse">🎤</span>
-              <span className="sr-only">Listening...</span>
-            </>
-          ) : (
-            <>
-              🎤
-              <span className="sr-only">Click to speak</span>
-            </>
-          )}
-        </button>
-      </div>
-      
-      {isListening && (
-        <p className="text-sm text-blue-600 animate-pulse">
-          Listening... Speak clearly into your microphone
-        </p>
-      )}
-      
-      <p className="text-xs text-gray-500">
-        Click the microphone and speak your {placeholder.toLowerCase()}
-      </p>
-    </div>
-  );
-};
-
-// components/QRCodeLogin.tsx
+// src/components/QRCodeLogin.tsx
 import React, { useState, useEffect } from 'react';
 
 interface QRCodeLoginProps {
@@ -150,7 +16,6 @@ export const QRCodeLogin: React.FC<QRCodeLoginProps> = ({ onLogin, isLoading }) 
     
     try {
       // In a real implementation, this would call your backend API
-      // to generate a unique QR code with a temporary token
       const mockQRData = {
         loginUrl: `${window.location.origin}/auth/qr-callback`,
         token: 'mock-token-' + Date.now(),
@@ -257,7 +122,7 @@ export const QRCodeLogin: React.FC<QRCodeLoginProps> = ({ onLogin, isLoading }) 
   );
 };
 
-// components/BiometricLogin.tsx
+// src/components/BiometricLogin.tsx
 import React, { useState, useEffect } from 'react';
 
 interface BiometricLoginProps {

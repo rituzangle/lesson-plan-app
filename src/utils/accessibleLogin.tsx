@@ -1,7 +1,8 @@
+import React from 'react';
 // src/pages/auth/LoginPage.tsx
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { useAuth } from '../../contexts/AuthContext';
+import { useAuth } from '../context/AuthContext';
 import { VoiceInput } from '../../components/VoiceInput';
 import { QRCodeLogin } from '../../components/QRCodeLogin';
 import { BiometricLogin } from '../../components/BiometricLogin';
