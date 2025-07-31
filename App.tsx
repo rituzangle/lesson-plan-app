@@ -3,28 +3,34 @@
 
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { Platform, View, Text, StyleSheet } from 'react-native';
+import { createStackNavigator } from '@react-navigation/stack'; // instead of native stack
+import 'react-native-gesture-handler'; // Required for navigation
+import 'react-native-reanimated'; // Required for navigation
+import 'react-native-screens'; // Required for navigation
+import 'react-native-safe-area-context'; // Required for navigation
+import 'expo-dev-client'; // Required for development client
+import { enableScreens } from 'react-native-screens'; // Required for navigation
+enableScreens(); // Enable screens for better performance
+import { NavigationContainer } from '@react-navigation/native'; // Required for navigation
+import { Platform, StyleSheet } from 'react-native';
 
 // Import from actual src/ structure in your repo
 import { WebLayoutFix } from './src/components/WebLayoutFix';
 import { WebFriendlyLogin } from './src/screens/WebFriendlyLogin';
 import { TeacherDashboard } from './src/screens/TeacherDashboard';
-import { AuthProvider } from './src/contexts/AuthContext'; //leaving here for context usage
 
+const Stack = createStackNavigator();
 // Import emergency styles for web
 // import './src/styles/emergencyStyles.css'; not supported in React Native
 // Emergency CSS loading for web
-if (Platform.OS === 'web') {
-  // Try to load emergency CSS from public folder
-  const link = document.createElement('link');
-  link.rel = 'stylesheet';
-  link.href = '/emergency-web-styles.css';
-  document.head.appendChild(link);
-}
-
-const Stack = createNativeStackNavigator();
+// if (Platform.OS === 'web') {
+//   // Try to load emergency CSS from public folder
+//   const link = document.createElement('link');
+//   link.rel = 'stylesheet';
+//   link.href = '/emergency-web-styles.css';
+//   document.head.appendChild(link);
+// }
+// const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
@@ -34,7 +40,8 @@ export default function App() {
           initialRouteName="Login"
           screenOptions={{
             headerShown: false,
-            contentStyle: { backgroundColor: '#f8f9fa' }
+            // Removed contentStyle, not supported in StackNavigationOptions
+            // If you want to set background color, use a wrapper or cardStyle for native-stack
           }}
         >
           <Stack.Screen 
@@ -57,40 +64,29 @@ export default function App() {
     </WebLayoutFix>
   );
 }
-
-// Emergency inline styles for web
+// Styles for the app
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    width: Platform.OS === 'web' ? '100vw' : '100%',
-    minHeight: Platform.OS === 'web' ? '100vh' : '100%',
-  },
-  placeholder: {
-    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    padding: 20,
-    backgroundColor: '#f0f2f5',
+    backgroundColor: '#f8f9fa', // Default background color
   },
-  placeholderTitle: {
+  title: {
     fontSize: 24,
     fontWeight: 'bold',
-    color: '#1976D2',
-    marginBottom: 16,
-    textAlign: 'center',
+    color: '#333',
+    marginBottom: 8,
   },
-  placeholderText: {
+  subtitle: {
     fontSize: 16,
     color: '#666',
-    marginBottom: 12,
     textAlign: 'center',
   },
-  placeholderInfo: {
-    fontSize: 14,
-    color: '#4CAF50',
-    fontFamily: Platform.OS === 'web' ? 'monospace' : 'Courier',
-    backgroundColor: '#f5f5f5',
-    padding: 8,
-    borderRadius: 4,
-  },
 });
+// Note: The styles above are not used in the WebLayoutFix component,
+// but can be used in other components or screens as needed.
+// This file serves as the main entry point for the application,
+// setting up navigation and wrapping the app in the WebLayoutFix component.
+// This ensures that the WebLayoutFix component is applied globally
+// to all screens in the app, providing a consistent layout and styling.

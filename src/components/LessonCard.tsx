@@ -1,4 +1,5 @@
 // Example for LessonCard.tsx
+// called by src/components/index.ts
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 

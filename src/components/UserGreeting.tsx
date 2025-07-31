@@ -1,7 +1,11 @@
 import React from 'react';
 import { Text, StyleSheet } from 'react-native';
 
-const UserGreeting = ({ name }) => (
+type UserGreetingProps = {
+  name: string;
+};
+
+const UserGreeting = ({ name }: UserGreetingProps) => (
   <Text style={styles.greeting}>Welcome back, {name}! ✨</Text>
 );
 

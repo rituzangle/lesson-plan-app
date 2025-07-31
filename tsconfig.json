@@ -94,10 +94,8 @@
     "src/**/*",
     "App.tsx",
     "app.json",
-    "expo-env.d.ts",
     "metro.config.js",
-    "babel.config.js",
-    ".expo/types/**/*.ts"
+    "babel.config.js"
   ],
   "exclude": [
     "node_modules",

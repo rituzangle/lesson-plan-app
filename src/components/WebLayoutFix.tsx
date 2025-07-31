@@ -36,7 +36,7 @@ const titleStyle: React.CSSProperties = {
 };
 
 const subtitleStyle: React.CSSProperties = {
-  fontSize: 16,
+  fontSize: 36,
   color: '#666',
   textAlign: 'center',
 };
